@@ -1,0 +1,53 @@
+/* SIMPLIFY SECTION */ 
+
+.simplify-section, .simplify-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.simplify-heading{
+    align-items: center;
+}
+
+.simplify-section > .get-started-btn{
+    align-self: center;
+    margin: 50px 0;
+}
+
+.simplify-heading{
+    background: url("../images/bg-simplify-section-mobile.svg") no-repeat;
+    background-color: $brightRed;
+    background-position: left 0 top 50%;
+    text-align: center;
+    padding: 70px 0;
+
+    h2{
+        color: white;
+        font-size: 32px;
+        max-width: 260px;
+    }
+
+    .get-started-btn{
+        color: $brightRed;
+        background-color: white;
+        box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 760px) {
+
+    .simplify-heading{
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+        background: url("../images/bg-simplify-section-desktop.svg") no-repeat;
+        background-color: $brightRed;
+        background-position: left 136px top 87%;
+
+        h2{
+            max-width: 380px;
+        }
+    }
+}

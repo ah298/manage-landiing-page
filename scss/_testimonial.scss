@@ -1,0 +1,90 @@
+/* TESTIMONIAL SECTION */
+.testimonials{
+    position: relative;
+    padding-bottom: 50px; //for testimonial control
+}
+
+.testimonial-heading{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.testimonial-container{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400%;
+    max-width: 1690px;
+    transition: transform 500ms ease-in-out;
+    position: relative;
+}
+
+.testimonial-card{
+    position: relative;
+    flex-basis: 100%;
+    margin: 0 10px;
+    max-width: 400px;
+    background-color: $veryLightGray;
+    padding:30px 18px 40px 18px;
+}
+
+.client-photo {
+    position: absolute;
+    top: -35%;
+    width: 75px;
+    transform: translate(-50%,50%)
+}
+
+.client-name{
+    color: $darkBlue;
+    margin: 25px 0 15px 0;
+}
+
+.client-testimony{
+    max-width: 295px;
+    margin: 0 auto;
+}
+
+
+// Navigation control
+.control{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.testimonial-card-control{
+    width: 13px;
+    height: 13px;
+    border: 1px solid $brightRed;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:not(:last-child){
+        margin-right: 5px;
+    }
+}
+
+.testimonial-card-control.active{
+    background-color: $brightRed;
+    box-shadow: 0 0 4px $brightRed;
+}
+
+
+@media (min-width: 500px) {
+
+    .testimonial-container{
+        left: 10%;
+    }
+}
+
+
+@media (min-width: 700px) {
+
+    .testimonial-container{
+        left: 20%;
+    }
+}

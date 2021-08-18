@@ -1,0 +1,140 @@
+
+/* RESET */ 
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */ 
+
+//Primary
+$brightRed: hsl(12, 88%, 59%);
+$darkBlue: hsl(228, 39%, 23%);
+
+//Neutral
+$darkGrayishBlue: hsl(227, 12%, 61%);
+$veryDarkBlue: hsl(233, 12%, 13%);
+$veryPaleRed: hsl(13, 100%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+/* HELPER CLASS */
+.container{
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+.section-divider{
+    margin: 20px 0 40px 0;
+}
+
+.hide-on-mobile{
+    display: none;
+}
+
+@media (min-width: 850px) {
+
+    /* HELPER CLASS */ 
+    .hide-on-desktop{
+        display: none;
+    }
+
+    .hide-on-mobile{
+        display: unset;
+    }
+}
+
+/* LAYOUT */ 
+body{
+    background: url("../images/bg-tablet-pattern.svg") no-repeat;
+    background-position: top -83px right -72px;
+    background-size: contain;
+    font-family: 'Be Vietnam', sans-serif; 
+    font-weight: 400;
+    color: $darkGrayishBlue;
+    overflow-x: hidden;
+}
+
+@media (min-width: 760px) {
+
+    body{
+        background-size: 80vh;
+        background-position:top -10vw right -12vh;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    body{
+        background-size: 90vh;
+    }
+}
+
+/* TYPOGRAPHY */ 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    color: $veryDarkBlue;
+}
+
+h2{
+    color: $darkBlue;
+}
+
+p, h4{
+    font-size: 14px;
+}
+
+/* BUTTON */
+.get-started-btn{
+    margin: 15px 0 ;
+    padding: 15px 30px;
+    background-color: $brightRed;
+    border-radius: 30px;
+    border-style: none;
+    color: $veryLightGray;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(242, 95, 58, 0.363);
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.get-started-btn:hover{
+    opacity: 0.9;
+}
+
+
+/* ATTRIBUTION */ 
+.attribution { font-size: 11px; text-align: center; background-color: $veryDarkBlue; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import "navbar";
+@import "hero";
+@import "about";
+@import "animation";
+@import "testimonial";
+@import "simplify";
+@import "footer";
+
+
+
+
+
+
+
+
+
+
+
+
+
+

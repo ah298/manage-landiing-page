@@ -1,0 +1,146 @@
+/* HEADER NAVBAR */ 
+
+// No scrolling
+body.open{
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+// Open and close Hamburger menu
+.nav-menu{
+    display: inline-block;
+    cursor: pointer;
+
+    &.open{
+        
+        .menu-icon-close{
+            display: inherit;
+        }
+
+        .menu-icon-open{
+            display: none
+        }
+    }
+
+    &.close{
+        .menu-icon-open{
+            display: inherit;
+        }
+
+        .menu-icon-close{
+            display: none;
+        }
+    }
+    
+}
+
+.nav-list{
+    position: absolute;
+    background-color: white;
+    top: 100px;
+    left: 30px;
+    right: 30px;   
+    padding: 15px;
+}
+
+.nav-list.open{
+    display: block;
+}
+
+.nav-list.close{
+    display: none;
+}
+
+// Navbar typography
+.nav-item{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-link{
+    color: $darkBlue;
+}
+
+// Overlay
+.overlay {
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.473));
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay.open{
+    display: block;
+}
+
+.overlay.close {
+    display: none;
+}
+
+@media (min-width: 850px) {
+
+    nav{
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    // Open and close Hamburger menu
+    .nav-menu{
+        display: inline-block;
+        cursor: pointer;
+    
+        &.open{
+            display: none;
+        }
+    
+        &.close{
+            display: none;
+        }
+        
+    }
+    
+
+    .nav-list, .nav-list.open, .nav-list.close{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-list{
+        position: static;
+        background-color: transparent;
+
+    }
+    
+    // Navbar typography
+    .nav-item{
+
+        margin-bottom: 15px;
+        transition: opacity 250ms ease-in-out;
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    
+    .nav-link{
+        color: $darkBlue;
+    }
+
+    nav .get-started-btn{
+        margin-bottom: 30px;
+    }
+    
+}
+
